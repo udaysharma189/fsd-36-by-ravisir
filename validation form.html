@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+    <script>
+        function check() {
+            var uid = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            var cpass = document.getElementById("confirmPassword").value;
+
+            var msg = "";
+
+            if (uid.length <= 0) {
+                msg += "Username is required";
+            }
+
+            if (pass.length <= 0) {
+                msg += "Password is required";
+            }
+
+            if (cpass.length <= 0) {
+                msg += "Confirm Password is required";
+            }
+
+            if (pass.length > 0 && pass.length < 8) {
+                msg += "Password must be at least 8 characters long";
+            }
+
+            if (pass != cpass) {
+                msg += "Password and Confirm Password do not match";
+            }
+
+            if (msg.length > 0) {
+                alert(msg);
+                return false;
+            }
+
+            alert("Login Successful");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+<form action="welcome.html" method="POST" onsubmit="return check()">
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br>
+    <br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    <br>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
+    <br>
+    <br>
+
+    <button  type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>
