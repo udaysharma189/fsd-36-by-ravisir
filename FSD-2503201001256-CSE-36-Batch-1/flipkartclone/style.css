@@ -1,0 +1,134 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f1f3f6;
+}
+
+header{
+display:flex;
+justify-content:space-around;
+align-items:center;
+background:#2874f0;
+padding:15px;
+color:white;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.search input{
+width:450px;
+padding:10px;
+border:none;
+outline:none;
+border-radius:5px;
+}
+
+.login{
+padding:10px 20px;
+background:white;
+color:#2874f0;
+border:none;
+cursor:pointer;
+font-weight:bold;
+}
+
+nav{
+background:white;
+padding:15px;
+}
+
+nav ul{
+display:flex;
+justify-content:space-around;
+list-style:none;
+font-weight:bold;
+}
+
+.slider{
+width:100%;
+margin-top:10px;
+}
+
+.slider img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:30px;
+}
+
+.card{
+background:white;
+padding:15px;
+text-align:center;
+border-radius:8px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+.card img{
+width:180px;
+height:180px;
+}
+
+.card h3{
+margin:10px 0;
+}
+
+.card p{
+color:green;
+font-size:18px;
+font-weight:bold;
+}
+
+.card button{
+margin-top:10px;
+padding:10px 20px;
+background:#fb641b;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+footer{
+background:#172337;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+.search input{
+width:300px;
+}
+
+nav ul{
+flex-wrap:wrap;
+gap:15px;
+}
+
+}
